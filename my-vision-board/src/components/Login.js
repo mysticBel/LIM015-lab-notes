@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { Stack, Container, Form, Button, Image } from "react-bootstrap";
 
+import firebaseApp from '../credentials';
+import { getAuth, createUserWithEmailAndPassword  } from 'firebase/auth';
+const auth = getAuth(firebaseApp);
+
 const Login = () => {
   // creating a state that checks if the user is logging or not(boolean)
   const [isRegistering, setIsRegistering] = useState(false);
