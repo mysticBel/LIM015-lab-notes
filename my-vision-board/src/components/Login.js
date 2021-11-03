@@ -9,18 +9,28 @@ const Login = () => {
   // creating a state that checks if the user is logging or not(boolean)
   const [isRegistering, setIsRegistering] = useState(false);
 
+  // we're gonna interact with Firebase asynchronously :
+  async function  submitHandler(e){
+    e.preventDefault();
+    const email = e.target.formBasicEmail.value;
+    const password = e.target.formBasicPassword.value;
+    console.log(email, password);
+    const user = await createUserWithEmailAndPassword(auth,email, password); //promise
+    console.log(user);
+  }
+
   return (
     <Container fluid>
       <Stack gap={2} className="col-md-3 mx-auto">
         <Image src="https://www.seekpng.com/png/full/17-171385_this-free-icons-png-design-of-cute-elephant.png" />
-        <h1 class="text-center">My Vision Board </h1>
-        <h3 class="text-center"> Dream, Believe, Plan, Do ! </h3>
+        <h1>My Vision Board </h1>
+        <h3> Dream, Believe, Plan, Do ! </h3>
           <h2>{isRegistering ? 'Register': 'Login' }  </h2> 
-          <Button variant="secondary" size="md" type="submit">
+          <Button variant="secondary " size="md" type="submit">
           Enter with Google
         </Button>
-        <h6 class="text-center"> or </h6>
-        <Form>
+        <h6 > or </h6>
+        <Form onSubmit={submitHandler}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
             <Form.Control type="email" placeholder="Enter email" />
