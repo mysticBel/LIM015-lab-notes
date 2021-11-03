@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Stack, Container, Form, Button, Image } from "react-bootstrap";
 
 import firebaseApp from '../credentials';
-import { getAuth, createUserWithEmailAndPassword  } from 'firebase/auth';
+import { getAuth, createUserWithEmailAndPassword,  signInWithEmailAndPassword  } from 'firebase/auth';
 const auth = getAuth(firebaseApp);
 
 const Login = () => {
@@ -14,9 +14,14 @@ const Login = () => {
     e.preventDefault();
     const email = e.target.formBasicEmail.value;
     const password = e.target.formBasicPassword.value;
-    console.log(email, password);
-    const user = await createUserWithEmailAndPassword(auth,email, password); //promise
-    console.log(user);
+    // console.log(email, password);
+    if (isRegistering){
+       const user = await createUserWithEmailAndPassword(auth,email, password); //promise
+       console.log(user);
+    } else {
+      signInWithEmailAndPassword(auth,email,password);
+    }
+   
   }
 
   return (
