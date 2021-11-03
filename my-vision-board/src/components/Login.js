@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { Stack, Container, Form, Button, Image } from "react-bootstrap";
 
 import firebaseApp from '../credentials';
-import { getAuth, createUserWithEmailAndPassword,  signInWithEmailAndPassword  } from 'firebase/auth';
+import { getAuth, createUserWithEmailAndPassword,  signInWithEmailAndPassword , signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 const auth = getAuth(firebaseApp);
+const googleProvider = new GoogleAuthProvider();
 
 const Login = () => {
   // creating a state that checks if the user is logging or not(boolean)
@@ -31,7 +32,8 @@ const Login = () => {
         <h1>My Vision Board </h1>
         <h3> Dream, Believe, Plan, Do ! </h3>
           <h2>{isRegistering ? 'Register': 'Login' }  </h2> 
-          <Button variant="secondary " size="md" type="submit">
+          <Button variant="secondary "  size="md" type="submit"
+           onClick={ () =>signInWithPopup(auth, googleProvider) }>
           Enter with Google
         </Button>
         <h6 > or </h6>
