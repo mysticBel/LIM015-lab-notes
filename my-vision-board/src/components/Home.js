@@ -4,6 +4,10 @@ import firebaseApp from '../credentials';
 import { getAuth, signOut } from 'firebase/auth';
 import {  Container, Button } from 'react-bootstrap';
 
+import  AddPost  from './AddPost.js';
+import  AllPosts  from './AllPosts.js';
+
+
 //initializing: 
 const auth = getAuth(firebaseApp);
 
@@ -13,6 +17,11 @@ const Home = () => {
         <Button onClick={() => signOut(auth)}>
           SignOut
         </Button>
+
+        <hr />
+        <AddPost />
+        <AllPosts />
+
     </Container>
     
 }
