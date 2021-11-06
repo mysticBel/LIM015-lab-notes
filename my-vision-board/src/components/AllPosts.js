@@ -1,10 +1,28 @@
 import React from 'react';
+import { Stack , Container, Col, Row, Button } from 'react-bootstrap'
 
-const AllPosts = () => {
+const AllPosts = (arrayPosts) => {
     return(
-        <div>
-            Posts conainer component
-        </div>
+        <Container>
+            <Stack>
+                {arrayPosts.map((objectPost) => {
+                    return (
+                        <Col>
+                          <Col> {objectPost.image}</Col>
+                          <Col> {objectPost.title}</Col>
+                          <Col> {objectPost.body}</Col>
+                          <Row>
+                           <Col> <Button>Edit</Button></Col>
+                           <Col> <Button>Delete</Button></Col>
+                          </Row>
+                        </Col>
+                    )
+
+                })}
+
+            </Stack>
+           
+        </Container>
     ) 
 
     

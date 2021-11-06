@@ -12,6 +12,14 @@ import  AllPosts  from './AllPosts.js';
 const auth = getAuth(firebaseApp);
 
 const Home = () => {
+
+  // definying fake data :
+ const fakeData = [
+   { id:1, title: "title1" , body:"this is  body 1"},
+   { id:2, title: "title2" , body:"this is  body 2"},
+   { id:3, title: "title3" , body:"this is  body 4"}
+  ];
+
     return <Container>
         <h4> Hello user! </h4>
         <Button onClick={() => signOut(auth)}>
@@ -20,7 +28,7 @@ const Home = () => {
 
         <hr />
         <AddPost />
-        <AllPosts />
+        <AllPosts arrayPosts={fakeData} />
 
     </Container>
     
