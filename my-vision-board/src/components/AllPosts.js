@@ -1,14 +1,16 @@
 import React from 'react';
 import { Stack , Container, Col, Row, Button } from 'react-bootstrap'
 
-const AllPosts = (arrayPosts) => {
+const AllPosts = ({arrayPosts}) => {
     return(
         <Container>
-            <Stack>
+            <Stack gap={3} >
                 {arrayPosts.map((objectPost) => {
                     return (
+                        <>
+                        <Row>
                         <Col>
-                          <Col> {objectPost.image}</Col>
+                         
                           <Col> {objectPost.title}</Col>
                           <Col> {objectPost.body}</Col>
                           <Row>
@@ -16,6 +18,8 @@ const AllPosts = (arrayPosts) => {
                            <Col> <Button>Delete</Button></Col>
                           </Row>
                         </Col>
+                        </Row>
+                        </>
                     )
 
                 })}
@@ -23,9 +27,9 @@ const AllPosts = (arrayPosts) => {
             </Stack>
            
         </Container>
-    ) 
+    );
 
     
-}
+};
 
 export default AllPosts;
