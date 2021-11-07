@@ -12,7 +12,7 @@ const auth = getAuth(firebaseApp);
 function App() {
    // creating global user 
    const [userGlobal, setUserGlobal] = useState(null);
-
+   console.log(userGlobal);
    onAuthStateChanged(auth, userFirebase =>{
      if(userFirebase){
        // in case the user has signed in already:
@@ -22,7 +22,8 @@ function App() {
           setUserGlobal(null);
      }
    })
-  return <>{ userGlobal ? <Home  emailUser = {userGlobal.email}/> : <Login />} </>
+  return <>{ userGlobal ? <Home  emailUser = {userGlobal.email} nameUser = {userGlobal.displayName}
+  photoUser = {userGlobal.photoURL} /> : <Login />} </>
 }
 
 export default App;
