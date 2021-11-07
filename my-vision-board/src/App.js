@@ -22,7 +22,7 @@ function App() {
           setUserGlobal(null);
      }
    })
-  return <>{ userGlobal ? <Home /> : <Login />} </>
+  return <>{ userGlobal ? <Home  emailUser = {userGlobal.email}/> : <Login />} </>
 }
 
 export default App;
