@@ -4,7 +4,7 @@ import { Stack , Container, Col, Row, Button } from 'react-bootstrap'
 const AllPosts = ({arrayPosts}) => {
     return(
         <Container>
-            <Stack gap={3} >
+            <Stack gap={3} direction="horizontal"  >
                 {arrayPosts.map((objectPost) => {
                     return (
                         <>
@@ -19,6 +19,7 @@ const AllPosts = ({arrayPosts}) => {
                           </Row>
                         </Col>
                         </Row>
+                       
                         </>
                     )
 

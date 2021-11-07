@@ -32,7 +32,7 @@ const Login = () => {
         <h1>My Vision Board </h1>
         <h3> Dream, Believe, Plan, Do ! </h3>
           <h2>{isRegistering ? 'Register': 'Login' }  </h2> 
-          <Button variant="secondary "  size="md" type="submit"
+          <Button variant="outline-secondary"  size="md" type="submit"
            onClick={ () =>signInWithPopup(auth, googleProvider) }>
           Enter with Google
         </Button>
