@@ -2,7 +2,7 @@ import React , { useState, useEffect } from 'react';
 import firebaseApp from '../credentials';
 import { getAuth, signOut } from 'firebase/auth';
 import { getFirestore, doc, getDoc , setDoc } from 'firebase/firestore';
-import {  Container, Button } from 'react-bootstrap';
+import {  Container, Button, Image } from 'react-bootstrap';
 
 import  AddPost  from './AddPost.js';
 import  AllPosts  from './AllPosts.js';
@@ -12,7 +12,7 @@ import  AllPosts  from './AllPosts.js';
 const auth = getAuth(firebaseApp);
 const firestore = getFirestore(firebaseApp);
 
-const Home = ({emailUser}) => {
+const Home = ({emailUser, nameUser, photoUser}) => {
   console.log('emailUser')
 
   const [arrayPosts, setArrayPosts] = useState(null);
@@ -60,14 +60,15 @@ const Home = ({emailUser}) => {
    } , [])
   
     return <Container>
-        <h4> Hello `{emailUser}`! </h4>
+        <h4> Hello {nameUser} </h4>
+        <Image src={ photoUser } alt="photoUser"/>
         <Button onClick={() => signOut(auth)}>
           SignOut
         </Button>
 
         <hr />
         <AddPost />
-        { arrayPosts ? <AllPosts arrayPosts={ arrayPosts } /> : null }
+        { arrayPosts ? <AllPosts arrayPosts={ arrayPosts } setArrayPosts={ setArrayPosts} emailUser={ emailUser }/> : null }
 
     </Container>
     
