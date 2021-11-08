@@ -2,7 +2,7 @@ import React , { useState, useEffect } from 'react';
 import firebaseApp from '../credentials';
 import { getAuth, signOut } from 'firebase/auth';
 import { getFirestore, doc, getDoc , setDoc } from 'firebase/firestore';
-import {  Container, Button, Image } from 'react-bootstrap';
+import {  Container, Button, Image, Col , Row} from 'react-bootstrap';
 
 import  AddPost  from './AddPost.js';
 import  AllPosts  from './AllPosts.js';
@@ -60,16 +60,20 @@ const Home = ({emailUser, nameUser, photoUser}) => {
    } , [])
   
     return <Container>
-        <h4> Hello {nameUser} </h4>
-        <Image src={ photoUser } alt="photoUser"/>
+       <Row  >
+       <Col sm={3} className="mt-5"> 
+        <Image src={ photoUser} roundedCircle alt="photoUser"/>
+        <h4>{nameUser} </h4>
         <Button onClick={() => signOut(auth)}>
           SignOut
         </Button>
+        </Col>
 
-        <hr />
-        <AddPost />
+        <Col sm={9}>  
+        <AddPost arrayPosts={ arrayPosts } setArrayPosts={ setArrayPosts} emailUser={ emailUser } />
         { arrayPosts ? <AllPosts arrayPosts={ arrayPosts } setArrayPosts={ setArrayPosts} emailUser={ emailUser }/> : null }
-
+        </Col>
+        </Row>
     </Container>
     
 }
