@@ -23,12 +23,12 @@ const AllPosts = ({arrayPosts , emailUser, setArrayPosts}) => {
 
     return(
         <Container>
-            <Stack gap={3} direction="horizontal"  >
+            <Stack gap={4} direction="horizontal" className="col-md-9 mx-auto"  >
                 {arrayPosts.map((objectPost) => {
                     return (
                         <>
                         <Row>
-                        <Col>
+                        <Col >
                          
                           <Col> {objectPost.title}</Col>
                           <Col> {objectPost.body}</Col>
