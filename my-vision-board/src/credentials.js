@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDZAM77LCeh3noJyVIPvuBpkrfIt4XNIMw",
-  authDomain: "my-vision-board-c7b87.firebaseapp.com",
-  projectId: "my-vision-board-c7b87",
-  storageBucket: "my-vision-board-c7b87.appspot.com",
-  messagingSenderId: "500056026680",
-  appId: "1:500056026680:web:4ed0bd8b2f2859320880cd"
+  apiKey: "AIzaSyByZIiBBzzT1p8YIIGBnQY_IeR9iuC56r8",
+  authDomain: "memories-dfc78.firebaseapp.com",
+  projectId: "memories-dfc78",
+  storageBucket: "memories-dfc78.appspot.com",
+  messagingSenderId: "643668291731",
+  appId: "1:643668291731:web:e2e636a5ab371153e3dd66"
 };
 
 // Initialize Firebase

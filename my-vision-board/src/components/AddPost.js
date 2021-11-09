@@ -16,7 +16,7 @@ const AddPost = ({arrayPosts, setArrayPosts, emailUser}) => {
         // create new array 
         const newArrayPosts = [...arrayPosts , { id: +new Date() , body: bodyNewPost , title: titleNewPost}]
         // update database Firestore
-        const docRef = doc( firestore, `myVisionBoard_users/${emailUser}`);
+        const docRef = doc( firestore, `memories_users/${emailUser}`);
         updateDoc(docRef, {posts: [...newArrayPosts]});
         // update State 
         setArrayPosts(newArrayPosts);
