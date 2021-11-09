@@ -23,14 +23,14 @@ const Login = () => {
     }
    
   }
-
+// https://www.seekpng.com/png/full/17-171385_this-free-icons-png-design-of-cute-elephant.png
   return (
     <Container fluid className="mt-5 ">
       <Stack gap={2} className=" login__stack col-md-3 mx-auto">
         
-        <h1 className="login__title">My Vision Board </h1>
-        <h3 className="login__subtitle" > Dream, Believe, Plan, Do ! </h3>
-        <Image className="login__logo" src="https://www.seekpng.com/png/full/17-171385_this-free-icons-png-design-of-cute-elephant.png" />
+        <h1 className="login__title">Memories </h1>
+        <h3 className="login__subtitle" > كتاب الحياة الشخصية </h3>
+        <Image className="login__logo" src="https://lh3.googleusercontent.com/tesbpVgpzMBF4SUZBNrGbt04Fd7mju051TWKJL3kMBXH2dwft7PrHe-02CbvZT9f7Oo" />
           <h2 className="login__register">{isRegistering ? 'Register': 'Login' }  </h2> 
           <Button className="login__Google"   size="md" type="submit"
            onClick={ () =>signInWithPopup(auth, googleProvider) }> Enter with Google 
