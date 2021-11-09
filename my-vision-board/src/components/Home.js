@@ -19,15 +19,14 @@ const Home = ({emailUser, nameUser, photoUser}) => {
 
   // definying fake data :
  const fakeData = [
-   { id:1, title: "✨ Welcome ✨ " , body:"Welcome to my Visual Board🎯 , keep mentally strong with this app, where you can easily find your notes and plans. Happy Planning !! "},
-   { id:2, title: " 💙 Don't be afraid to start over 🦋" , body:"This time, you're not starting from scratch, 😉you are starting from experience. Advance your romantic agenda! 🔥✌️ Bring the joy, Feel the Love & Be grateful ...💛 "}, 
-   { id:3, title: "Example : November 2025 (Health)" , body: "Drink water at least 1.5 lt , do yoga and meditate at nights, etc" }
+   { id:1, title: "✨ Welcome ✨ " , body:"Welcome to Memories , keep aware of your life story and growth with this app, eveyday is a new adventure  !! "},
+   { id:2, title: " 💙 Don't be afraid to be yourself 🦋" , body:"✌️ Bring the joy, Feel the Love & Be grateful ...💛 "}
   ];
 
   // creating async await to search doc
   async function searchDocOrCreateDoc (idDoc){
     // create ref to document (doc(firestore, path with string template))
-       const docRef = doc(firestore, `myVisionBoard_users/${idDoc}`);
+       const docRef = doc(firestore, `memories_users/${idDoc}`);
     // search document , await to wait for results 
        const docSearch = await getDoc(docRef);
     // document exists?  -true

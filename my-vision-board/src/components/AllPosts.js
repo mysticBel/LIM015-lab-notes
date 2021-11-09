@@ -11,7 +11,7 @@ const AllPosts = ({arrayPosts , emailUser, setArrayPosts}) => {
         // create new array posts 
         const newArrayPosts = arrayPosts.filter((objectPost)=> objectPost.id !== idPostToDelete);
         // update backend
-        const docRef = doc(firestore, `myVisionBoard_users/${emailUser}`);
+        const docRef = doc(firestore, `memories_users/${emailUser}`);
          updateDoc(docRef, {posts: [...newArrayPosts]});
         // update state
         setArrayPosts(newArrayPosts); 
