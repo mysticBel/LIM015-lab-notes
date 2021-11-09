@@ -23,19 +23,20 @@ const AllPosts = ({arrayPosts , emailUser, setArrayPosts}) => {
 
     return(
         <Container className=" allposts__container">
-            <Stack  gap={4} direction="horizontal" className=" col-md-9 stack__container"  >
+            <Stack  gap={4}  className=" col-md-9 mx-auto stack__container"  >
                 {arrayPosts.map((objectPost) => {
                     return (
                         <>
                        
-                        <Col >
-                            <Col> {objectPost.title}</Col>
+                        <Col ><Row className=" ml-auto "><Col> <i> {objectPost.title} </i></Col>
+                              <Col sm={1}> <Button variant="outline"><box-icon name='edit' color='rgba(110,199,185,0.6)' ></box-icon></Button></Col>
+                              <Col sm={1} > <Button variant="outline" onClick={() => removePost(objectPost.id)}  ><box-icon name='trash' type='solid' color='rgba(241,141,104,0.6)' ></box-icon></Button></Col>
+                            
+                            </Row>
+                            
                             <Col> {objectPost.body}</Col> 
                             
-                            <Row>
-                              <Col sm={1}> <Button variant="outline"><box-icon name='edit' color='rgba(110,199,185,0.6)' ></box-icon></Button></Col>
-                              <Col sm={1}> <Button variant="outline" onClick={() => removePost(objectPost.id)}  ><box-icon name='trash' type='solid' color='rgba(241,141,104,0.6)' ></box-icon></Button></Col>
-                            </Row>
+                            
                         </Col>
                      
                        
