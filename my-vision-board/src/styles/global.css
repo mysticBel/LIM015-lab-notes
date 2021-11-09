@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+body {
+    margin: 0;
+
+    background-image: url(https://img.freepik.com/free-vector/pattern-geometric-line-circle-abstract-seamless-blue-line_60284-53.jpg?size=626&ext=jpg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+ 
+
+ /***************** Login component ************************/
+  
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+  }
+  .login__stack{
+    background-color: rgba(255, 255, 255, 0.89);
+    margin-top:5rem;
+    padding: 2rem 4rem 4rem 4rem;
+    width: 35rem;
+    border-radius:40px;
+    justify-content: center;
+    align-items: center;
+    
+  }
+ 
+.login__title {
+    color: #b0bde2;
+    text-align: center;
+    font-weight:800;
+    font-size: 3rem;
+ }
+ .login__subtitle {
+    color: #c6a8dfe5;
+    /* color: #738adb; */
+    text-align: center;
+    font-size: 1.8rem;
+ }
+ .login__logo{
+    width: 30%;
+    margin: auto;
+    
+ }
+ .login__input{
+    border-radius: 30px;
+   
+ }
+ .login__register{
+    color: #aed2e2e5;
+    text-align: center;
+    font-weight:700;
+    font-size: 2.5rem;
+ }
+
+ 
+ .login__or{
+    color: #aed2e2e5;
+    text-align: center;
+    font-weight:550;
+    font-size: 1.7rem;
+ }
+.login__Google{
+    width: 300px;
+    border-radius: 30px;
+    background-color: #fff;
+    color: gray;
+    border-color:rgb(173, 173, 173);
+   
+}
+.login__Google:hover{
+    width: 300px;
+    border-radius: 30px;
+    background-color: #fff;
+    color: black;
+    border-color:rgb(173, 173, 173);
+}
+
+
+ .login__button{
+     border-radius: 30px;
+     background-image: linear-gradient(to right, #f4fad683 0%, #6b6dc277 0%, #72efdc4f 100%);
+     width: 300px;
+ }
+
+ .login__isRegistering{
+     outline:none;
+     color: gray;
+ }
+
+.login__button:hover{
+    border-radius: 30px;
+   
+    width: 300px;
+      color: black;
+ }
+
+ 
+ /***************** Home component ************************/
+ .home__leftColumn{
+    background-color: rgb(214, 231, 231);
+    margin-top:5rem;
+    margin-bottom:5rem;
+    padding-bottom:2rem;
+    border-radius: 35px 0 0 35px;
+    
+
+ }
+.home__user{
+    color: gray;
+    text-align: center;
+    /* color: #738adb; */
+    font-size: 1.5rem;
+}
+
+.home__userPhoto{
+    justify-content: center;
+    align-items: center;
+    margin:3rem 7rem 1rem 7rem ;
+
+}
+ .home__rightColumn{
+    background-color: rgb(255, 255, 255);
+    margin-top:5rem;
+    margin-bottom:5rem;
+    padding-bottom:2rem;
+    border-radius: 0 35px 35px 0;
+ }
+ 
+ .signout{
+    border-radius: 30px;
+    background-image: linear-gradient(to right, #f4fad683 0%, #6b6dc277 0%, #72efdc4f 100%);
+    width: 100px;
+    margin:0.1rem 7rem 1rem 7rem ;
+ }
+ 
+ /***** AddPost component *****/
+
+ .form__input{
+    border-radius: 10px;
+   
+ }
+  .submitColumn{
+    margin:auto;
+  }
+ .submit{
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #f4fad683 0%, #6b6dc277 0%, #72efdc4f 100%);
+    width: 100%;
+    margin:auto;
+    outline:none;
+    overflow:hidden;
+    border-color: transparent;
+   
+ }
+
+ /***** AllPosts component *****/
+ .allposts__container{
+    background-color: rgb(255, 255, 255);
+    margin-top:5rem;
+    padding-top:3rem;
+    padding-bottom:3rem;
+    display: grid;
+ }
+
+ .stack__container{
+ grid-template-columns: max-content;
+ }
