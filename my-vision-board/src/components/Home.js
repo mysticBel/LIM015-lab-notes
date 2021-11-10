@@ -61,8 +61,8 @@ const Home = ({emailUser, nameUser, photoUser}) => {
     return <Container>
        <Row  >
        <Col sm={3} className="home__leftColumn"> 
-        <Image className="home__userPhoto" src={ photoUser} roundedCircle alt="photoUser"/>
-        <h4 className="home__user">{nameUser} </h4>
+        <Image className="home__userPhoto" src={ photoUser ? photoUser: "https://raw.githubusercontent.com/mysticBel/LIM015-lab-notes/main/my-vision-board/src/assets/avatarDefault.jpg"} roundedCircle alt="photoUser"/>
+        <h4 className="home__user">{nameUser? nameUser : emailUser} </h4>
         <Button className="signout" variant="outline-secondary" onClick={() => signOut(auth)}>
           Sign Out
         </Button>

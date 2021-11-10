@@ -30,7 +30,7 @@ const Login = () => {
         
         <h1 className="login__title">Memories </h1>
         <h3 className="login__subtitle" > كتاب الحياة الشخصية </h3>
-        <Image className="login__logo" src="https://lh3.googleusercontent.com/tesbpVgpzMBF4SUZBNrGbt04Fd7mju051TWKJL3kMBXH2dwft7PrHe-02CbvZT9f7Oo" />
+        <Image className="login__logo" src="https://raw.githubusercontent.com/mysticBel/LIM015-lab-notes/main/my-vision-board/src/assets/logo.png" />
           <h2 className="login__register">{isRegistering ? 'Register': 'Login' }  </h2> 
           <Button className="login__Google"   size="md" type="submit"
            onClick={ () =>signInWithPopup(auth, googleProvider) }> Enter with Google 
