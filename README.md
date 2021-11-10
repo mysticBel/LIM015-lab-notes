@@ -1,5 +1,17 @@
 # Lab Notes : Memories 
-![img]()
+
+## Login View
+![img](https://raw.githubusercontent.com/mysticBel/LIM015-lab-notes/main/my-vision-board/src/assets/desktop-login.png)
+<br><br>
+
+## Register View
+![img](https://raw.githubusercontent.com/mysticBel/LIM015-lab-notes/main/my-vision-board/src/assets/desktop-register.png) <br><br>
+
+
+## If user has signed up with an email account :
+![img](https://raw.githubusercontent.com/mysticBel/LIM015-lab-notes/main/my-vision-board/src/assets/home-createWithEmail.png)<br><br>
+## If user has entered with a Google Account :
+![img](https://raw.githubusercontent.com/mysticBel/LIM015-lab-notes/main/my-vision-board/src/assets/home-createWithGoogle.png)<br><br>
 
 
 ## Índice
