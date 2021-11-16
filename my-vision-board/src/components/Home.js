@@ -4,8 +4,8 @@ import { getAuth, signOut } from 'firebase/auth';
 import { getFirestore, doc, getDoc , setDoc } from 'firebase/firestore';
 import {  Container, Button, Image, Col , Row} from 'react-bootstrap';
 
-// import  AddPost  from './AddPost.js';
-import {AllPosts, AddPost }  from './AllPosts.js';
+import  AddPost  from './AddPost.js';
+import  AllPosts  from './AllPosts.js';
 
 
 //initializing: 
@@ -42,13 +42,9 @@ const Home = ({emailUser, nameUser, photoUser}) => {
           const dataDoc = docSearch.data();
           return dataDoc.posts;
        }
-       
-
-   
-
-    
   }
   
+
   // async. function, obtain posts and save them in a state (line 18)
    useEffect(()=>{
       async function fetchPosts(){
