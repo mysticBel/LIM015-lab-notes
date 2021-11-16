@@ -27,18 +27,22 @@ const AllPosts = ({arrayPosts , emailUser, setArrayPosts}) => {
                 {arrayPosts.map((objectPost) => {
                     return (
                         <>
-                       
-                        <Col ><Row className=" ml-auto "><Col> <i> {objectPost.title} </i></Col>
-                              <Col sm={1}> <Button variant="outline"><box-icon name='edit' color='rgba(110,199,185,0.6)' ></box-icon></Button></Col>
-                              <Col sm={1} > <Button variant="outline" onClick={() => removePost(objectPost.id)}  ><box-icon name='trash' type='solid' color='rgba(241,141,104,0.6)' ></box-icon></Button></Col>
-                            
+                        
+                        
+                        <Col>
+                        
+                           <Row className=" ml-auto">
+                               <Col className=" ml-auto "> <i> {objectPost.title} </i></Col> 
+                             <Col sm={1}><a href={objectPost.url}><Button className="buttonImage" variant="outline sm"><box-icon name='images' color='#b8c1f3' ></box-icon> </Button></a></Col>
+                              <Col sm={1}> <Button variant="outline " ><box-icon name='edit' color='rgba(110,199,185,0.6)' ></box-icon></Button></Col>
+                              <Col sm={1} > <Button variant="outline"  onClick={() => removePost(objectPost.id)}  ><box-icon name='trash' type='solid' color='rgba(241,141,104,0.6)' ></box-icon></Button></Col>  
                             </Row>
+                             <Col> {objectPost.body}</Col> 
                             
-                            <Col> {objectPost.body}</Col> 
                             
                             
                         </Col>
-                     
+                    
                        
                         </>
                     )
