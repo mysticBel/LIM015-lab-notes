@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Stack, Container, Form, Button, Image } from "react-bootstrap";
 import firebaseApp from '../credentials';
-import { getAuth, createUserWithEmailAndPassword,  signInWithEmailAndPassword , signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+import { getAuth, createUserWithEmailAndPassword,  signInWithEmailAndPassword , signInWithRedirect, GoogleAuthProvider } from 'firebase/auth';
 const auth = getAuth(firebaseApp);
 const googleProvider = new GoogleAuthProvider();
 
@@ -33,7 +33,7 @@ const Login = () => {
         <Image className="login__logo" src="https://raw.githubusercontent.com/mysticBel/LIM015-lab-notes/main/my-vision-board/src/assets/logo.png" />
           <h2 className="login__register">{isRegistering ? 'Register': 'Login' }  </h2> 
           <Button className="login__Google"   size="md" type="submit"
-           onClick={ () =>signInWithPopup(auth, googleProvider) }> Enter with Google 
+           onClick={ () =>signInWithRedirect(auth, googleProvider) }> Enter with Google 
          
         </Button>
         <h6 className="login__or"> or </h6>
