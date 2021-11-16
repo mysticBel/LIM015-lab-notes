@@ -93,11 +93,13 @@ body {
      border-radius: 30px;
      background-image: linear-gradient(to right, #f4fad683 0%, #6b6dc277 0%, #72efdc4f 100%);
      width: 300px;
+     border-color: rgb(255, 255, 255);
  }
 
  .login__isRegistering{
      outline:none;
      color: gray;
+     
  }
 
 .login__button:hover{
@@ -162,7 +164,7 @@ body {
     margin:auto;
     outline:none;
     overflow:hidden;
-    border-color: transparent;
+    border-color: rgb(255, 255, 255);
    
  }
 
@@ -177,4 +179,8 @@ body {
 
  .stack__container{
  grid-template-columns: max-content;
+ }
+ .buttonImage{
+   border-radius: 15px;
+   border-color: rgb(255, 255, 255);
  }
