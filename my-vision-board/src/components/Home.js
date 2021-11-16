@@ -18,9 +18,9 @@ const Home = ({emailUser, nameUser, photoUser}) => {
   const [arrayPosts, setArrayPosts] = useState(null);
 
   // definying fake data :
- const fakeData = [
-   { id:1, title: "✨ Welcome ✨ " , body:"Welcome to Memories , keep aware of your life story and growth with this app, eveyday is a new adventure  !! "},
-   { id:2, title: " 💙 Don't be afraid to be yourself 🦋" , body:"✌️ Bring the joy, Feel the Love & Be grateful ...💛 "}
+ const defaultArrayData = [
+   { id:1, title: "✨ Welcome ✨ " , body:"Welcome to Memories , keep aware of your life story and growth with this app, everyday is a new adventure  !! "  , url:"https://picsum.photos/420"},
+   { id:2, title: " 💙 Don't be afraid to be yourself 🦋" , body:"✌️ Bring the joy, Feel the Love & Be grateful ...💛 " , url:"https://picsum.photos/420"}
   ];
 
   // creating async await to search doc
@@ -37,7 +37,7 @@ const Home = ({emailUser, nameUser, photoUser}) => {
 
        } else {
           // if not then -false
-          await setDoc(docRef,{ posts: [...fakeData] });
+          await setDoc(docRef,{ posts: [...defaultArrayData] });
           const docSearch = await getDoc(docRef);
           const dataDoc = docSearch.data();
           return dataDoc.posts;
