@@ -8,10 +8,11 @@
 ![img](https://raw.githubusercontent.com/mysticBel/LIM015-lab-notes/main/my-vision-board/src/assets/desktop-register.png) <br><br>
 
 
-## If user has signed up with an email account :
-![img](https://raw.githubusercontent.com/mysticBel/LIM015-lab-notes/main/my-vision-board/src/assets/home-createWithEmail.png)<br><br>
 ## If user has entered with a Google Account :
-![img](https://raw.githubusercontent.com/mysticBel/LIM015-lab-notes/main/my-vision-board/src/assets/home-createWithGoogle.png)<br><br>
+![img](https://raw.githubusercontent.com/mysticBel/MemoriesDiary/main/my-vision-board/src/assets/desktopView-home.png)<br><br>
+## If user has signed up with an email account :
+![img](https://raw.githubusercontent.com/mysticBel/MemoriesDiary/main/my-vision-board/src/assets/desktopView-emailUser.png)<br><br>
+
 
 
 ## Índice
