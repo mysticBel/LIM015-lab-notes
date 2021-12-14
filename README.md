@@ -1,5 +1,9 @@
 # Lab Notes : Memories 
 
+
+## Figma design
+![img](https://raw.githubusercontent.com/mysticBel/MemoriesDiary/main/my-vision-board/src/assets/figma-memories.png)
+
 ## Login View
 ![img](https://raw.githubusercontent.com/mysticBel/LIM015-lab-notes/main/my-vision-board/src/assets/desktop-login.png)
 <br><br>
